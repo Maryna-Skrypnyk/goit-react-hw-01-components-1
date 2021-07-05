@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import defaultImage from '../images/default.jpg';
+import defaultImage from './images/default.jpg';
 
 const Profile = ({ avatar, name, tag, location, stats }) => (
   <div class="profile">

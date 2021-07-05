@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const StatisticsList = ({ title, stats }) => (
+const Statistics = ({ title, stats }) => (
   <>
     {title && <h2 class="title">{title}</h2>}
     <ul class="stat-list">
@@ -15,11 +15,11 @@ const StatisticsList = ({ title, stats }) => (
   </>
 );
 
-StatisticsList.defaultProps = {
+Statistics.defaultProps = {
   title: '',
 };
 
-StatisticsList.propTypes = {
+Statistics.propTypes = {
   title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
@@ -30,4 +30,4 @@ StatisticsList.propTypes = {
   ).isRequired,
 };
 
-export default StatisticsList;
+export default Statistics;

@@ -1,17 +1,16 @@
 import React from 'react';
-import Profile from './components/Profile';
+import Profile from './components/Profile/Profile';
 import user from './json/user.json';
-import StatisticsList from './components/StatisticsList';
+import Statistics from './components/Statistics/Statistics';
 import statisticalData from './json/statistical-data.json';
-import FriendList from './components/FriendList';
+import FriendList from './components/FriendList/FriendList';
 import friends from './json/friends.json';
-import TransactionHistory from './components/TransactionHistory';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './json/transactions.json';
 
 const App = () => {
   return (
     <div>
-      <h1>Головний компонент</h1>
       <Profile
         avatar={user.avatar}
         name={user.name}
@@ -20,7 +19,7 @@ const App = () => {
         stats={user.stats}
       />
       <section class="statistics">
-        <StatisticsList title="Upload stats" stats={statisticalData} />
+        <Statistics title="Upload stats" stats={statisticalData} />
       </section>
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
