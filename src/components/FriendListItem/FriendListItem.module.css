@@ -1,8 +1,15 @@
 .status {
   margin-right: 10px;
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 50%;
+}
+
+@media screen and (min-width: 768px) {
+  .status {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 .true {
@@ -20,11 +27,23 @@
   max-width: 100%;
   height: auto;
   border-radius: 10%;
-  margin-right: 15px;
+  margin-right: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .avatar {
+    margin-right: 15px;
+  }
 }
 
 .name {
   margin: 0;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .name {
+    font-size: 26px;
+  }
 }

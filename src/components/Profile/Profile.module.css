@@ -7,10 +7,16 @@
 .container {
   margin-right: auto;
   margin-left: auto;
-  padding: 120px;
-  display: block;
+  padding: 60px;
   background-color: lightgrey;
-  width: 595px;
+  width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 595px;
+    padding: 120px;
+  }
 }
 
 .content {
@@ -26,12 +32,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 20px;
   margin: 0;
   background-color: #ffffff;
   border-bottom: 1px solid darkgrey;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+}
+
+@media screen and (min-width: 768px) {
+  .description {
+    padding: 50px;
+  }
 }
 
 .avatar {
@@ -50,8 +62,14 @@
 
 .name {
   margin-bottom: 15px;
-  font-size: 26px;
+  font-size: 18px;
   font-weight: 700;
+}
+
+@media screen and (min-width: 768px) {
+  .name {
+    font-size: 26px;
+  }
 }
 
 .tag {
@@ -64,9 +82,16 @@
 
 .tag,
 .location {
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 500;
   color: darkgrey;
+}
+
+@media screen and (min-width: 768px) {
+  .tag,
+  .location {
+    font-size: 18px;
+  }
 }
 
 .stats {
@@ -84,11 +109,18 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   background-color: #eeeeee;
   border-right: 1px solid darkgray;
   width: 118.33px;
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
 }
 
 .item:first-child {
@@ -104,10 +136,22 @@
   margin-bottom: 10px;
   color: darkgrey;
   font-weight: 500;
-  font-size: 18px;
+  font-size: 14px;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 18px;
+  }
 }
 
 .quantity {
   font-weight: 600;
-  font-size: 20px;
+  font-size: 16px;
+}
+
+@media screen and (min-width: 768px) {
+  .quantity {
+    font-size: 20px;
+  }
 }

@@ -6,23 +6,36 @@
 .container {
   margin-left: auto;
   margin-right: auto;
-  display: block;
-  padding: 70px;
+  padding: 40px;
   background-color: lightgrey;
-  width: 595px;
+  width: 300px;
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    padding: 70px;
+    width: 595px;
+  }
 }
 
 .title {
-  padding: 30px;
+  padding: 20px;
   margin: 0;
   background-color: #ffffff;
   text-align: center;
-  font-size: 35px;
+  font-size: 20px;
   font-weight: 700;
   color: gray;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    font-size: 35px;
+    padding: 30px;
+  }
 }
 
 .statList {
@@ -41,10 +54,18 @@
   flex-direction: column;
   align-items: center;
   margin: 0;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  width: 113.75px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 64px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+@media screen and (min-width: 768px) {
+  .item {
+    width: 113.75px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 }
 
 .item:last-child {
@@ -59,11 +80,23 @@
   margin-bottom: 10px;
   color: #ffffff;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .label {
+    font-size: 16px;
+  }
 }
 
 .percentage {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 14px;
   color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .percentage {
+    font-size: 20px;
+  }
 }
