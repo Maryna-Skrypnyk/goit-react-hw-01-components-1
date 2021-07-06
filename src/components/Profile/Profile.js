@@ -1,36 +1,39 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import defaultImage from './images/default.jpg';
+import './Profile.css';
 
 const Profile = ({ avatar, name, tag, location, stats }) => (
-  <div class="profile">
-    <div class="description">
-      <img
-        src={avatar}
-        alt="Аватар пользователя"
-        width="512"
-        height="512"
-        class="avatar"
-      />
-      <p class="name">{name}</p>
-      <p class="tag">@{tag}</p>
-      <p class="location">{location}</p>
-    </div>
+  <div className="Profile">
+    <div className="Profile__container">
+      <div className="Profile__description">
+        <img
+          src={avatar}
+          alt="Аватар пользователя"
+          width="512"
+          height="512"
+          className="Profile__avatar"
+        />
+        <p className="Profile__name">{name}</p>
+        <p className="Profile__tag">@{tag}</p>
+        <p className="Profile__location">{location}</p>
+      </div>
 
-    <ul class="stats">
-      <li>
-        <span class="label">Followers</span>
-        <span class="quantity"> {stats.followers}</span>
-      </li>
-      <li>
-        <span class="label">Views</span>
-        <span class="quantity"> {stats.views}</span>
-      </li>
-      <li>
-        <span class="label">Likes</span>
-        <span class="quantity"> {stats.likes}</span>
-      </li>
-    </ul>
+      <ul className="Profile__stats">
+        <li className="Profile__item">
+          <span className="Profile__label">Followers</span>
+          <span className="Profile__quantity"> {stats.followers}</span>
+        </li>
+        <li className="Profile__item">
+          <span className="Profile__label">Views</span>
+          <span className="Profile__quantity"> {stats.views}</span>
+        </li>
+        <li className="Profile__item">
+          <span className="Profile__label">Likes</span>
+          <span className="Profile__quantity"> {stats.likes}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 );
 
