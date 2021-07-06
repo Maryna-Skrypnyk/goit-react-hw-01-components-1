@@ -1,4 +1,6 @@
 .Profile {
+  margin-top: 40px;
+  margin-bottom: 40px;
   display: block;
   margin-right: auto;
   margin-left: auto;
@@ -9,6 +11,7 @@
 }
 
 .Profile__container {
+  margin: 0;
   display: block;
   border: 1px solid darkgrey;
   border-radius: 5px;
@@ -22,6 +25,7 @@
   align-items: center;
   justify-content: center;
   padding: 50px;
+  margin: 0;
   background-color: #ffffff;
   border-bottom: 1px solid darkgrey;
   border-top-left-radius: 5px;
