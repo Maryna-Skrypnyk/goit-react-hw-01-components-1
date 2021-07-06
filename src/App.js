@@ -18,9 +18,7 @@ const App = () => {
         location={user.location}
         stats={user.stats}
       />
-      <section class="statistics">
-        <Statistics title="Upload stats" stats={statisticalData} />
-      </section>
+      <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />;
     </div>
