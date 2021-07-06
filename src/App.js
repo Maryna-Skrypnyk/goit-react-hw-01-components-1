@@ -10,7 +10,7 @@ import transactions from './json/transactions.json';
 
 const App = () => {
   return (
-    <div className="App">
+    <div>
       <Profile
         avatar={user.avatar}
         name={user.name}
@@ -20,7 +20,7 @@ const App = () => {
       />
       <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
+      <TransactionHistory items={transactions} />
     </div>
   );
 };

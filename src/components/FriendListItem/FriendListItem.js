@@ -19,7 +19,7 @@ FriendListItem.defaultProps = {
 FriendListItem.propTypes = {
   avatar: PropTypes.string,
   name: PropTypes.string.isRequired,
-  isOnline: PropTypes.oneOf(true, false),
+  isOnline: PropTypes.oneOf([true, false]),
   // isOnline: PropTypes.bool.isRequired,
 };
 
