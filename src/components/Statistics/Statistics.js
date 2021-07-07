@@ -12,21 +12,19 @@ const color = () => {
 
 const Statistics = ({ title, stats }) => (
   <section className={styles.section}>
-    <div className={styles.container}>
-      {title && <h2 className={styles.title}>{title}</h2>}
-      <ul className={styles.statList}>
-        {stats.map(({ id, label, percentage }) => (
-          <li
-            className={styles.item}
-            key={id}
-            style={{ backgroundColor: color() }}
-          >
-            <span className={styles.label}>{label}</span>
-            <span className={styles.percentage}> {percentage}%</span>
-          </li>
-        ))}
-      </ul>
-    </div>
+    {title && <h2 className={styles.title}>{title}</h2>}
+    <ul className={styles.statList}>
+      {stats.map(({ id, label, percentage }) => (
+        <li
+          className={styles.item}
+          key={id}
+          style={{ backgroundColor: color() }}
+        >
+          <span className={styles.label}>{label}</span>
+          <span className={styles.percentage}> {percentage}%</span>
+        </li>
+      ))}
+    </ul>
   </section>
 );
 

@@ -30,7 +30,7 @@
   margin-right: 10px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .avatar {
     margin-right: 15px;
   }
@@ -42,7 +42,7 @@
   font-weight: 700;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 480px) {
   .name {
     font-size: 26px;
   }

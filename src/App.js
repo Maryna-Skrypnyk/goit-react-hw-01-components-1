@@ -1,4 +1,5 @@
 import React from 'react';
+import Layout from './components/Layout/Layout';
 import Profile from './components/Profile/Profile';
 import user from './json/user.json';
 import Statistics from './components/Statistics/Statistics';
@@ -7,11 +8,10 @@ import FriendList from './components/FriendList/FriendList';
 import friends from './json/friends.json';
 import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './json/transactions.json';
-// import Container from './components/Container/Container';
 
 const App = () => {
   return (
-    <div>
+    <Layout>
       <Profile
         avatar={user.avatar}
         name={user.name}
@@ -22,7 +22,7 @@ const App = () => {
       <Statistics title="Upload stats" stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </div>
+    </Layout>
   );
 };
 
