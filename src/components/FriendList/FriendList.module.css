@@ -1,6 +1,6 @@
 .friends {
   width: 300px;
-  margin: 20px auto;
+  margin: 40px auto;
   list-style: none;
   font-style: normal;
   display: flex;
@@ -40,5 +40,5 @@
 }
 
 .item:not(:last-child) {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
