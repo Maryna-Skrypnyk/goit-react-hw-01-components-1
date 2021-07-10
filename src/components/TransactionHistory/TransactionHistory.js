@@ -2,6 +2,22 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './TransactionHistory.module.css';
 
+const TransactionBodyItem = ({ id, type, amount, currency }, i) => {
+  const trClassName = i % 2 ? styles.secondary : styles.primary;
+  return (
+    <tr key={id} className={trClassName}>
+      <td className={styles.data}>{type}</td>
+      <td className={styles.data}>{amount}</td>
+      <td className={styles.data}>{currency}</td>
+    </tr>
+  );
+};
+
+const TransactionBody = ({ items }) => {
+  if (items.length === 0) return null;
+  return <tbody>{items.map(TransactionBodyItem)}</tbody>;
+};
+
 const TransactionHistory = ({ items }) => (
   <table className={styles.table}>
     <thead>
@@ -11,15 +27,8 @@ const TransactionHistory = ({ items }) => (
         <th className={styles.name}>Currency</th>
       </tr>
     </thead>
-    <tbody>
-      {items.map(({ id, type, amount, currency }) => (
-        <tr key={id} className={styles.row}>
-          <td className={styles.data}>{type}</td>
-          <td className={styles.data}>{amount}</td>
-          <td className={styles.data}>{currency}</td>
-        </tr>
-      ))}
-    </tbody>
+
+    <TransactionBody items={items} />
   </table>
 );
 

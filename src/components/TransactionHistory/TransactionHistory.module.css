@@ -67,9 +67,17 @@
   }
 }
 
-.row:nth-child(odd) {
+.primary {
   background: #fff;
 }
-.row:nth-child(even) {
+
+.secondary {
   background: #f7f7f7;
 }
+
+/* tr:nth-child(odd) {
+  background: #fff;
+}
+   tr:nth-child(even) {
+  background: #f7f7f7;
+} */

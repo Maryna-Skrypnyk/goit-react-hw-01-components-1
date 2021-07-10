@@ -10,10 +10,27 @@ const color = () => {
   return bgColor;
 };
 
+const StatsListItem = ({ id, label, percentage }) => {
+  return (
+    <li className={styles.item} key={id} style={{ backgroundColor: color() }}>
+      <span className={styles.label}>{label}</span>
+      <span className={styles.percentage}> {percentage}%</span>
+    </li>
+  );
+};
+
+const StatsList = ({ stats }) => {
+  if (stats.length === 0) return null;
+  return <ul className={styles.statList}>{stats.map(StatsListItem)}</ul>;
+};
+
 const Statistics = ({ title, stats }) => (
-  <section className={styles.section}>
+  <section className={styles.statistics}>
     {title && <h2 className={styles.title}>{title}</h2>}
-    <ul className={styles.statList}>
+
+    <StatsList stats={stats} />
+
+    {/* <ul className={styles.statList}>
       {stats.map(({ id, label, percentage }) => (
         <li
           className={styles.item}
@@ -24,7 +41,7 @@ const Statistics = ({ title, stats }) => (
           <span className={styles.percentage}> {percentage}%</span>
         </li>
       ))}
-    </ul>
+    </ul> */}
   </section>
 );
 
