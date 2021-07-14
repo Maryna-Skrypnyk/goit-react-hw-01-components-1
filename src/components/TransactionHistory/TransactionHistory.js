@@ -22,8 +22,13 @@ const TransactionBody = ({ items }) => {
   if (items.length === 0) return null;
   return (
     <tbody>
-      {items.map(item => (
-        <TransactionBodyItem key={item.id} />
+      {items.map(({ id, type, amount, currency }) => (
+        <TransactionBodyItem
+          key={id}
+          type={type}
+          amount={amount}
+          currency={currency}
+        />
       ))}
     </tbody>
   );
